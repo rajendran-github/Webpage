@@ -1,1 +1,38 @@
-<router-outlet></router-outlet>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <a href="#" class="navbar-brand" routerLink="">Rajendran</a>
+  <button type="button"
+          name="button"
+          class="navbar-toggler"
+          (click)="toggle()"
+          data-toggle="collapse"
+          data-target="#navBarSupportedContent">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarFixed" class="navbar-collapse" [ngClass]="{ 'show': navBarOpen }">
+    <ul class="navbar-nav mr-auto">
+      <!-- Home -->
+      <li class="nav-item active">
+        <a class="nav-link"
+           routerLink="/Home"
+           routerLinkActive="active">Home</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" style="padding-right : 100px;">
+      <!-- Login -->
+      <li class="nav-item">
+        <a class="nav-link"
+           routerLink="/Login"
+           routerLinkActive="active">Login</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
