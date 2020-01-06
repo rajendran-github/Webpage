@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Webpage';
+
+  navBarOpen = false;
+
+  toggle() {
+    this.navBarOpen = !this.navBarOpen;
+  }
 }
