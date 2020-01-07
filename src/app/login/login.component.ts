@@ -1,5 +1,11 @@
+import { Directive, Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-// import { Observable } from 
+
+
+import { FormGroup } from '@angular/forms';
+import { Login } from './login';
+import { UserDataService } from '../services/user-data.service';
+// import { Observable } from
 
 @Component({
   selector: 'app-login',
@@ -8,9 +14,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  user : Login = {
+    username : "",
+    password : ""
+  };
+
+  constructor(private _userDataService : UserDataService) { }
 
   ngOnInit() {
+    // this._userDataService
   }
+
+
 
 }

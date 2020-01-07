@@ -1,5 +1,12 @@
 #form {
-  padding-top: 45px;
+  /* padding-top: 45px; */
   /* padding-left: 20px;
   padding-right: 20px; */
+}
+
+.jumbotron {
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    background-color: #e9ecef;
+    border-radius: 0.3rem;
 }

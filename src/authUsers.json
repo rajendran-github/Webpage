@@ -5,7 +5,10 @@
       "lastname" : "Kumaran",
       "username" : "rajendrank",
       "email" : "rajgullu414@gmail.com",
-      "password" : "rajendran"
+      "password" : "rajendran",
+      "securtiyQuestion" : "What is your favorite bike?",
+      "securityAnswer" : "Kawasaki Ninja H2R"
+
     }
   ]
 }
