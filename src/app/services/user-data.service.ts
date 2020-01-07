@@ -11,10 +11,10 @@ export class UserDataService {
   private baseUrl = "http://localhost:3000/users";
   constructor(private _httpClient : HttpClient) { }
 
-  // getUsers () : Observable<UserDataClass>{
-  //   return this._httpClient.get<UserDataClass>(baseUrl);
-  // }
-  //
+  getUsers () : Observable<UserDataClass[]>{
+    return this._httpClient.get<UserDataClass[]>(this.baseUrl);
+  }
+
   // postUser(data) : Observable<UserDataClass> {
   //   return this._httpClient.post<UserDataClass>(data);
   // }

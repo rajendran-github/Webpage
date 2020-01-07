@@ -9,6 +9,16 @@
       "securtiyQuestion" : "What is your favorite bike?",
       "securityAnswer" : "Kawasaki Ninja H2R"
 
+    },
+    {
+      "firstname" : "Angel",
+      "lastname" : "nancy",
+      "username" : "angelnancy",
+      "email" : "angel@gmail.com",
+      "password" : "angelnancy",
+      "securtiyQuestion" : "What is your favorite bike?",
+      "securityAnswer" : "DIO"
+
     }
   ]
 }
