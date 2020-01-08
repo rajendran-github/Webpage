@@ -1,8 +1,8 @@
 import { Directive, Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { FormGroup, NgForm } from '@angular/forms';
+
 import { Login } from './login';
 import { UserDataService } from '../services/user-data.service';
 import { UserDataClass } from '../services/user-data-class';
@@ -15,7 +15,7 @@ import { map, filter, scan } from 'rxjs/operators';
 })
 export class LoginComponent implements OnInit {
 
-  private usersData : UserDataClass[] = [];
+  private usersData : UserDataClass[] = null;
   private unknownUser : boolean = true;
   user : Login = {
     username : "",
@@ -25,7 +25,8 @@ export class LoginComponent implements OnInit {
   constructor(private _userDataService : UserDataService, private _route : Router) { }
 
   ngOnInit() {
-    this.getUsersData();
+    if (this.usersData == null)
+      this.getUsersData();
   }
 
   getUsersData () {

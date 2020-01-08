@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormGroup, NgForm } from '@angular/forms';
+
+import { UserDataService } from '../services/user-data.service';
+import { UserDataClass } from '../services/user-data-class';
 
 @Component({
   selector: 'app-register',
@@ -7,7 +12,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  private userData = new UserDataClass();
+  constructor(private _userDataService : UserDataService) { }
 
   ngOnInit() {
   }

@@ -1,1 +1,64 @@
-<p>register works!</p>
+
+
+<div class="container">
+  <div class="row" style="padding-top : 50px;">
+    <div class="col-md-8 col-lg-6 col-sm-12 offset-md-2 offset-lg-3 offset-sm-0">
+      <div class="jumbotron text-center">
+          <h1>Flick Takies</h1>
+      </div> <!-- jumbotron text-center -->
+
+      <form #login="ngForm"
+            class="form"
+            id="form"
+            (ngSubmit)="registerSubmit(login)">
+          <!-- Firstname -->
+          <div class="form-group">
+            <label for="">Firstname</label>
+            <input class="form-control"
+                   type="text"
+                   name="firstname"
+                   value=""
+                   #firstname
+                   [(ngModel)]="userData.firstname"
+                   required>
+          </div>
+          <!-- Lastname -->
+          <div class="form-group">
+            <label for="">Lastname</label>
+            <input class="form-control"
+                   type="text"
+                   name="lastname"
+                   value=""
+                   #lastname
+                   [(ngModel)]="userData.lastname"
+                   required>
+          </div>
+          <!-- Username -->
+          <div class="form-group">
+            <label for="">Username</label>
+            <input class="form-control"
+                   type="text"
+                   name="username"
+                   value=""
+                   #username
+                   [(ngModel)]="userData.username"
+                   required>
+          </div>
+          <!-- Email -->
+          <div class="form-group">
+            <label for="">Password</label>
+            <input class="form-control"
+                   type="text"
+                   name="email"
+                   value=""
+                   #email
+                   [(ngModel)]="userData.email"
+                   required>
+          </div>
+
+
+      </form> <!-- form -->
+
+    </div> <!-- col-md-6 col-lg-6 col-sm-6 offset-3 -->
+  </div> <!-- Row -->
+</div> <!-- Container -->

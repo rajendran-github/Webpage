@@ -6,4 +6,14 @@ export class UserDataClass {
   password : string;
   securtiyQuestion : string;
   securityAnswer : string;
+
+  constructor() {
+    this.firstname = "";
+    this.lastname = "";
+    this.username = "";
+    this.email = "";
+    this.password = "";
+    this.securtiyQuestion = "";
+    this.securityAnswer = "";
+  }
 }
