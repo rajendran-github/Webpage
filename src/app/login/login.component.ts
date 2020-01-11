@@ -15,8 +15,8 @@ import { map, filter, scan } from 'rxjs/operators';
 })
 export class LoginComponent implements OnInit {
 
-  private usersData : UserDataClass[] = null;
-  private unknownUser : boolean = true;
+  usersData : UserDataClass[] = null;
+  unknownUser : boolean = true;
   user : Login = {
     username : "",
     password : ""
@@ -25,8 +25,9 @@ export class LoginComponent implements OnInit {
   constructor(private _userDataService : UserDataService, private _route : Router) { }
 
   ngOnInit() {
-    if (this.usersData == null)
+    if (this.usersData == null) {
       this.getUsersData();
+    }
   }
 
   getUsersData () {
@@ -46,6 +47,7 @@ export class LoginComponent implements OnInit {
     if (this.usersData.filter( usDt => {
       if (data.value.username == usDt.username && data.value.password == usDt.password)
         return usDt; }).length > 0) {
+      this._userDataService.setUserLoggedIn = true;
       this._route.navigate(['/Home']);
     }
     else {

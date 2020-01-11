@@ -25,7 +25,14 @@
       <li class="nav-item">
         <a class="nav-link"
            routerLink="/Login"
-           routerLinkActive="active">Login</a>
+           routerLinkActive="active"
+           [class.d-none]="isUserLoggedIn()">Login</a>
+
+        <a class="nav-link"
+          routerLink="/Home"
+          routerLinkActive="active"
+          (click)="logout()"
+          [class.d-none]="!isUserLoggedIn()">Logout</a>
       </li>
     </ul>
   </div>

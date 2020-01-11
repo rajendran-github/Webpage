@@ -1,5 +1,4 @@
 
-
 <div class="container">
   <div class="row" style="padding-top : 50px;">
     <div class="col-md-8 col-lg-6 col-sm-12 offset-md-2 offset-lg-3 offset-sm-0">
@@ -7,13 +6,13 @@
           <h1>Flick Takies</h1>
       </div> <!-- jumbotron text-center -->
 
-      <form #login="ngForm"
+      <form #register="ngForm"
             class="form"
             id="form"
             (ngSubmit)="registerSubmit(login)">
           <!-- Firstname -->
           <div class="form-group">
-            <label for="">Firstname</label>
+            <label for="firstname">Firstname</label>
             <input class="form-control"
                    type="text"
                    name="firstname"
@@ -24,7 +23,7 @@
           </div>
           <!-- Lastname -->
           <div class="form-group">
-            <label for="">Lastname</label>
+            <label for="lastname">Lastname</label>
             <input class="form-control"
                    type="text"
                    name="lastname"
@@ -35,7 +34,7 @@
           </div>
           <!-- Username -->
           <div class="form-group">
-            <label for="">Username</label>
+            <label for="username">Username</label>
             <input class="form-control"
                    type="text"
                    name="username"
@@ -46,7 +45,7 @@
           </div>
           <!-- Email -->
           <div class="form-group">
-            <label for="">Password</label>
+            <label for="email">Email</label>
             <input class="form-control"
                    type="text"
                    name="email"
@@ -55,7 +54,39 @@
                    [(ngModel)]="userData.email"
                    required>
           </div>
+          <!-- Password -->
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control"
+                   type="password"
+                   name="password"
+                   value=""
+                   #password
+                   [(ngModel)]="userData.password"
+                   required>
+          </div>
+          <!-- Security Question -->
+          <div class="form-group">
+            <label for="securtiyQuestion">Security Question</label>
+            <select class="form-control"
+                    name="securtiyQuestion"
+                    #securtiyQuestion
+                    [(ngModel)]="userData.securtiyQuestion">
+              <option value="">What was your first pet's name?</option>
+              <option value="">Your first school name?</option>
+              <option value="">What was your first crush name?</option>
+              <option value="">Dummy data</option>
+              <option value="">Data Dummy</option>
+            </select>
+          </div>
 
+          <div class="form-group">
+            <input class="btn btn-primary"
+                   [disabled]="register.invalid"
+                   type="submit"
+                   name="button"
+                   value="Register">
+          </div>
 
       </form> <!-- form -->
 

@@ -12,10 +12,14 @@ import { UserDataClass } from '../services/user-data-class';
 })
 export class RegisterComponent implements OnInit {
 
-  private userData = new UserDataClass();
+  userData = new UserDataClass();
   constructor(private _userDataService : UserDataService) { }
 
   ngOnInit() {
+  }
+
+  registerSubmit(regData) {
+    
   }
 
 }
